@@ -3,3 +3,4 @@ help: |
   <b>This bot</b> allows you to see how Telegram bots can be built.
 language: Please, select the language.
 language_selected: <b>This bot</b> now speaks English.
+tutorial: In order to use this <b>Bot</b>, you just need to add it to your telegram channel and grant administrator rights, with the ability to <b>delete</b>, <b>add</b> and <b>edit</b> posts. Do not worry, all your posts will remain safe and sound, <b>Bot</b> will only send automatically warning at the very end of your telegram channel, before the advertising section.
