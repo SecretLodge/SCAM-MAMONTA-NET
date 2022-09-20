@@ -58,6 +58,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@grammyjs/transformer-throttler@npm:^1.1.2":
+  version: 1.1.2
+  resolution: "@grammyjs/transformer-throttler@npm:1.1.2"
+  dependencies:
+    bottleneck: ^2.0.0
+  peerDependencies:
+    grammy: ^1.0.0
+  checksum: 90dfa9af7d1100371ff15fbac96c5eb7a69e3f1d59c38c81aea059240f5f4ebde502f01350c179425b508208e3b386d08d5e62ada4fc8181ea248ac90adf0ab3
+  languageName: node
+  linkType: hard
+
 "@grammyjs/types@npm:^2.4.0":
   version: 2.4.0
   resolution: "@grammyjs/types@npm:2.4.0"
@@ -486,6 +497,13 @@ __metadata:
   version: 2.2.0
   resolution: "binary-extensions@npm:2.2.0"
   checksum: ccd267956c58d2315f5d3ea6757cf09863c5fc703e50fbeb13a7dc849b812ef76e3cf9ca8f35a0c48498776a7478d7b4a0418e1e2b8cb9cb9731f2922aaad7f8
+  languageName: node
+  linkType: hard
+
+"bottleneck@npm:^2.0.0":
+  version: 2.19.5
+  resolution: "bottleneck@npm:2.19.5"
+  checksum: c5eef1bbea12cef1f1405e7306e7d24860568b0f7ac5eeab706a86762b3fc65ef6d1c641c8a166e4db90f412fc5c948fc5ce8008a8cd3d28c7212ef9c3482bda
   languageName: node
   linkType: hard
 
@@ -2986,6 +3004,7 @@ __metadata:
     "@grammyjs/i18n": ^0.5.0
     "@grammyjs/menu": ^1.0.4
     "@grammyjs/runner": ^1.0.3
+    "@grammyjs/transformer-throttler": ^1.1.2
     "@typegoose/typegoose": ^9.3.1
     "@types/js-yaml": ^4.0.5
     "@types/node": ^16.11.12

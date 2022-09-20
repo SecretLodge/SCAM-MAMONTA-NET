@@ -3,4 +3,44 @@ help: |
   <b>This bot</b> allows you to see how Telegram bots can be built.
 language: Please, select the language.
 language_selected: <b>This bot</b> now speaks English.
-tutorial: In order to use this <b>Bot</b>, you just need to add it to your telegram channel and grant administrator rights, with the ability to <b>delete</b>, <b>add</b> and <b>edit</b> posts. Do not worry, all your posts will remain safe and sound, <b>Bot</b> will only send automatically warning at the very end of your telegram channel, before the advertising section.
+tutorial: |
+  — Hello, i am a <b><a href="http://t.me/ScamMamontaNetBot">@SCAM-MAMONTA.NET</a></b> Bot 🦣
+
+  — I am a simple bot that will warn your channel subscribers that the built-in advertising from the telegram does not apply to your community and the owners of this advertising may not be conscientious people.
+
+  — In order for me to work for you, you just need to add me to your telegram channel and grant administrator rights, with the following capabilities: 
+
+  <b>DELETE</b> 🗑
+
+  <b>POST</b> ✏️
+
+  <b>EDIT</> ✍️  
+
+  — Do not worry, all your posts will remain safe and sound. <b>I</b> will only send automatic warnings at the very end of your telegram channel, before the advertising section. If you do not believe, then it does not matter, the bot is open source. 
+
+  — <b>Commands:</b>
+
+  <b>/set_language</b> — change language for your channel
+
+  <b>/language</b> — set language
+
+  <b>/github</b> — watch open source
+
+  — If you want to support the developer, you can do so here - <b><a href="https://www.donationalerts.com/r/marccelo_fibonacci">CLICK</a></b>
+success: Bot success added in your channel <b>@${username}</b>
+failed: You have already added a bot to your channel <b>@${username}</b> and kicked. Please add the bot to your channel again.
+warning: |
+  — Hello, my name is <b><a href="http://t.me/ScamMamontaNetBot">@SCAM-MAMONTA.NET</a></b> Bot 🦣
+
+  — I want to warn you that below this post there may be embedded advertising,from a Telegram to which the author of this community has nothing to do.
+
+  — However, please be careful. The authors of this advertisement may be scammers and promote their product or services, in order to earn money, in fraudulent ways.
+
+  — Thank you for your attention ❤️
+many_messages: In your <b>@${username}</b> community is getting so many posts that the bot is getting a little tired. Please wait a few seconds and it will work again.
+github: Open source — <a href="https://github.com/SecretLodge/SCAMA.NET_Bot">GITHUB</a>
+language_select_channel: 'Enter language for your channel:'
+language_channel_success: 'In your channel success set language:'
+select_channel: 'Enter channel for change language:'
+not_permissions: In your channel <b>@${username}</b> bot do not have permissions for send and edit messages
+msg_bot_added: 'In channel <b>@${username}</b> added bot. Count subscribers: <b>${count}</b>. Count added channels: <b>${channels}</b>'

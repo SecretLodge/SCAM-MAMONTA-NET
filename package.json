@@ -25,6 +25,7 @@
     "nodemon": "^2.0.19"
   },
   "devDependencies": {
+    "@grammyjs/transformer-throttler": "^1.1.2",
     "@typegoose/typegoose": "^9.3.1",
     "@types/js-yaml": "^4.0.5",
     "@types/node": "^16.11.12",

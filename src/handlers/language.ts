@@ -3,8 +3,9 @@ import languageMenu from '@/menus/language'
 import sendOptions from '@/helpers/sendOptions'
 
 export default function handleLanguage(ctx: Context) {
-  return ctx.replyWithLocalization('language', {
-    ...sendOptions(ctx),
-    reply_markup: languageMenu,
-  })
+  if (ctx.chat?.type === 'private')
+    return ctx.replyWithLocalization('language', {
+      ...sendOptions(),
+      reply_markup: languageMenu,
+    })
 }

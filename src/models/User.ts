@@ -1,22 +1,30 @@
 import { getModelForClass, modelOptions, prop } from '@typegoose/typegoose'
 
 @modelOptions({ schemaOptions: { timestamps: true } })
-export class User {
+export class UserWarningBot {
   @prop({ required: true, index: true, unique: true })
   id!: number
-  @prop({ required: true, default: 'en' })
+  @prop({ required: true, default: 'ru' })
   language!: string
+  @prop({ required: false })
+  status!: string
 }
 
-const UserModel = getModelForClass(User)
+const UserModel = getModelForClass(UserWarningBot)
 
-export function findOrCreateUser(id: number) {
-  return UserModel.findOneAndUpdate(
+export function findOrCreateUser(id: number, status?: string) {
+  const result = UserModel.findOneAndUpdate(
     { id },
-    {},
+    { status },
     {
       upsert: true,
       new: true,
     }
   )
+  if (!result) return UserModel.create({ id })
+  return result
+}
+
+export function findUserById(id: number) {
+  return UserModel.findOne({ id })
 }
