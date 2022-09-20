@@ -1,0 +1,6 @@
+{
+  "tasks": {
+    "start": "yarn build-ts && node dist/app.js"
+  },
+  "importMap": "./import_map.json"
+}
