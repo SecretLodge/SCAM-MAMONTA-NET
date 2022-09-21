@@ -1,0 +1,10 @@
+{
+  "functions": {
+    "api/**": {
+      "includeFiles": "node_modules/grammy/plugins/**"
+    }
+  },
+  "github": {
+    "silent": true
+  }
+}
