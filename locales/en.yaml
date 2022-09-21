@@ -4,7 +4,7 @@ help: |
 language: Please, select the language.
 language_selected: <b>This bot</b> now speaks English.
 tutorial: |
-  — Hello, i am a <b><a href="@ScamMamontaNetBot">@SCAM-MAMONTA.NET</a></b> Bot 🦣
+  — Hello, i am a<b>@ScamMamontaNetBot</b> 🦣
 
   — I am a simple bot that will warn your channel subscribers that the built-in advertising from the telegram does not apply to your community and the owners of this advertising may not be conscientious people.
 
@@ -30,7 +30,7 @@ tutorial: |
 success: Bot success added in your channel <b>@${username}</b>
 failed: You have already added a bot to your channel <b>@${username}</b> and kicked. Please add the bot to your channel again.
 warning: |
-  — Hello, my name is <b><a href="="@ScamMamontaNetBot">@SCAM-MAMONTA.NET</a></b> Bot 🦣
+  — Hello, my name is <b>@ScamMamontaNetBot</b> 🦣
 
   — I want to warn you that below this post there may be embedded advertising,from a Telegram to which the author of this community has nothing to do.
 
