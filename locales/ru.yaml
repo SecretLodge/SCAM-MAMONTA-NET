@@ -37,7 +37,7 @@ warning: |
 
   — Спасибо за внимание ❤️
 many_messages: В вашем сообществе <b>@${username}</b> публикуется столько постов, что бот немного устал. Подождите пожалуйста несколько секунд, и он снова заработает.
-github: Открытый исходный код — <a href="https://github.com/SecretLodge/SCAMA.NET_Bot">GITHUB</a>
+github: Открытый исходный код — <a href="https://github.com/SecretLodge/SCAM-MAMONTA-NET">GITHUB</a>
 language_select_channel: 'Выберите язык для вашего сообщества:'
 language_channel_success: 'Вы успешно изменили язык для сообщества:'
 select_channel: 'Выберите сообщество в котором вы хотите изменить язык:'
