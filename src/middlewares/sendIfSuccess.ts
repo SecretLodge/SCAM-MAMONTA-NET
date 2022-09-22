@@ -10,6 +10,15 @@ export default async function sendIfSuccess(ctx: Context) {
     ctx.myChatMember?.new_chat_member.status === 'administrator'
   ) {
     try {
+      if (ctx.dbchannel.message_id)
+        await ctx.api.deleteMessage(
+          Number(ctx.dbchannel.id),
+          ctx.dbchannel.message_id
+        )
+    } catch {
+      console.log('Message for delete not found')
+    }
+    try {
       ctx.i18n.locale(ctx.dbchannel.language)
       await ctx
         .sendWithLocalization(
