@@ -12,6 +12,8 @@ import configureI18n from '@/middlewares/configureI18n'
 import handleChannels from '@/handlers/channels'
 import handleGithub from '@/handlers/github'
 import handleLanguage from '@/handlers/language'
+import handleStatChannel from '@/handlers/statisticsChannels'
+import handleStatisticsAdmin from '@/handlers/statistics'
 import handleWarning from '@/handlers/warning'
 import i18n from '@/helpers/i18n'
 import languageMenu from '@/menus/language'
@@ -35,6 +37,8 @@ async function runApp() {
   bot.command(['start', 'language'], handleLanguage)
   bot.command('github', handleGithub)
   bot.command('set_language', handleChannels)
+  bot.command('statistics', handleStatisticsAdmin)
+  bot.command('channels', handleStatChannel)
   bot.on('my_chat_member', sendIfSuccess)
   bot.on('msg', handleWarning)
   bot.catch(console.error)

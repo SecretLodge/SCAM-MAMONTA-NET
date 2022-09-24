@@ -12,6 +12,8 @@ export class ChannelScamBot {
   admin_id!: number
   @prop({ required: false })
   message_id!: number
+  @prop({ required: false })
+  subscribers!: number
 }
 
 const ChannelModel = getModelForClass(ChannelScamBot)
@@ -41,6 +43,7 @@ export function findAndUpdateChannel(optionsModel: {
   username?: string
   admin_id?: number
   message_id?: number
+  subscribers?: number
 }) {
   return ChannelModel.findOneAndUpdate(
     { id: optionsModel.id },
@@ -48,6 +51,7 @@ export function findAndUpdateChannel(optionsModel: {
       username: optionsModel.username,
       admin_id: optionsModel.admin_id,
       message_id: optionsModel.message_id,
+      subscribers: optionsModel.subscribers,
     },
     {
       upsert: true,

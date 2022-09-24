@@ -8,6 +8,8 @@ export class UserWarningBot {
   language!: string
   @prop({ required: false })
   status!: string
+  @prop({ required: false })
+  username!: string
 }
 
 const UserModel = getModelForClass(UserWarningBot)
@@ -23,6 +25,10 @@ export function findOrCreateUser(id: number, status?: string) {
   )
   if (!result) return UserModel.create({ id })
   return result
+}
+
+export function countUsers() {
+  return UserModel.find()
 }
 
 export function findUserById(id: number) {

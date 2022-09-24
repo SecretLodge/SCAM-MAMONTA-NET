@@ -2,7 +2,7 @@ import { countChannels, findAndUpdateChannel } from '@/models/Channel'
 import Context from '@/models/Context'
 import env from '@/helpers/env'
 import sendOptions from '@/helpers/sendOptions'
-import sendOptionsNotify from '@/helpers/sendOptionsNotificatoin'
+import sendOptionsNotificatoin from '@/helpers/sendOptionsNotificatoin'
 
 export default async function sendIfSuccess(ctx: Context) {
   if (
@@ -20,17 +20,19 @@ export default async function sendIfSuccess(ctx: Context) {
     }
     try {
       ctx.i18n.locale(ctx.dbchannel.language)
+      const count = await ctx.getChatMemberCount()
       await ctx
         .sendWithLocalization(
           'warning',
           Number(ctx.dbchannel.id),
           ctx.dbchannel.username,
-          { ...sendOptionsNotify() }
+          { ...sendOptionsNotificatoin() }
         )
         .then(async (message) => {
           ctx.dbchannel = await findAndUpdateChannel({
             id: ctx.dbchannel.id,
             message_id: message.message_id,
+            subscribers: count,
           })
         })
       ctx.i18n.locale(ctx.dbuser.language)
@@ -40,7 +42,6 @@ export default async function sendIfSuccess(ctx: Context) {
         ctx.dbchannel.username,
         { ...sendOptions() }
       )
-      const count = await ctx.getChatMemberCount()
       const channels = await countChannels()
       await ctx.sendWithStatistics(
         'msg_bot_added',

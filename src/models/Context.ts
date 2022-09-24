@@ -9,6 +9,8 @@ class Context extends BaseContext {
   dbuser!: DocumentType<UserWarningBot>
   dbchannel!: DocumentType<ChannelScamBot>
 
+  stringChannels!: string
+
   replyWithLocalization: this['reply'] = (text, other, ...rest) => {
     text = this.i18n.t(text)
     return this.reply(text, other, ...rest)
@@ -36,6 +38,35 @@ class Context extends BaseContext {
       username: username,
       channels: channels,
       count: subscribers,
+    })
+    return this.api.sendMessage(id, text, sendOptions)
+  }
+
+  sendWithStatisticsAdmin = (
+    text: string,
+    id: number,
+    countChannels: number,
+    countUsers: number,
+    sendOptions: object
+  ) => {
+    text = this.i18n.t(text, {
+      countChannels: countChannels,
+      countUsers: countUsers,
+    })
+    return this.api.sendMessage(id, text, sendOptions)
+  }
+
+  sendWithStatisticsChannels = (
+    text: string,
+    id: number,
+    channels: ChannelScamBot[],
+    sendOptions: object
+  ) => {
+    for (const channel of channels) {
+      this.stringChannels += `@${channel.username}: <b>${channel.subscribers}</b> <b>SUBS</b> <b>(${channel.language})</b> \n`
+    }
+    text = this.i18n.t(text, {
+      namesChannels: this.stringChannels.slice(9),
     })
     return this.api.sendMessage(id, text, sendOptions)
   }

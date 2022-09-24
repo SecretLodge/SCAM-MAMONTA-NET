@@ -15,6 +15,7 @@ export default async function handleWarning(ctx: Context) {
     }
     ctx.i18n.locale(ctx.dbchannel.language)
     try {
+      const subscribers = await ctx.getChatMemberCount()
       await ctx
         .sendWithLocalization(
           'warning',
@@ -26,6 +27,7 @@ export default async function handleWarning(ctx: Context) {
           ctx.dbchannel = await findAndUpdateChannel({
             id: ctx.dbchannel.id,
             message_id: message.message_id,
+            subscribers: subscribers,
           })
         })
     } catch {

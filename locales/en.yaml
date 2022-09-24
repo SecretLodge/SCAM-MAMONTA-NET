@@ -4,11 +4,11 @@ help: |
 language: Please, select the language.
 language_selected: <b>This bot</b> now speaks English.
 tutorial: |
-  — Hello, i am a<b>@ScamMamontaNetBot</b> 🦣
+  — Hello, i am a <b>@ScamMamontaNetBot</b> 🦣
 
-  — I am a simple bot that will warn your channel subscribers that the built-in advertising from the telegram does not apply to your community and the owners of this advertising may not be conscientious people.
+  — I'm a bot that will warn your community subscribers that inline ads from Telegram can turn out to be malicious.
 
-  — In order for me to work for you, you just need to add me to your telegram channel and grant administrator rights, with the following capabilities: 
+  — In order for me to work for you, add me to your channel and grant administrator rights with the following capabilities:
 
   <b>DELETE</b> 🗑
 
@@ -16,7 +16,7 @@ tutorial: |
 
   <b>EDIT</> ✍️  
 
-  — Do not worry, all your posts will remain safe and sound. <b>I</b> will only send automatic warnings at the very end of your telegram channel, before the advertising section. If you do not believe, then it does not matter, the bot is open source. 
+  — <b>I</b> will only send automatic warnings at the very end of your telegram channel, before the advertising section. The bot is open source.
 
   — <b>Commands:</b>
 
@@ -32,11 +32,7 @@ failed: You have already added a bot to your channel <b>@${username}</b> and kic
 warning: |
   — Hello, my name is <b>@ScamMamontaNetBot</b> 🦣
 
-  — I want to warn you that below this post there may be embedded advertising,from a Telegram to which the author of this community has nothing to do.
-
-  — However, please be careful. The authors of this advertisement may be scammers and promote their product or services, in order to earn money, in fraudulent ways.
-
-  — Thank you for your attention ❤️
+  — Below may be advertising, the authors of which may be intruders. Be careful ❤️
 many_messages: In your <b>@${username}</b> community is getting so many posts that the bot is getting a little tired. Please wait a few seconds and it will work again.
 github: Open source — <a href="https://github.com/SecretLodge/SCAM-MAMONTA-NET">GITHUB</a>
 language_select_channel: 'Enter language for your channel:'
@@ -44,3 +40,9 @@ language_channel_success: 'In your channel success set language:'
 select_channel: 'Enter channel for change language:'
 not_permissions: In your channel <b>@${username}</b> bot do not have permissions for send and edit messages
 msg_bot_added: 'In channel <b>@${username}</b> added bot. Count subscribers: <b>${count}</b>. Count added channels: <b>${channels}</b>'
+statistics: |
+  Count of channels: <b>${countChannels}</b>
+  Count of users: <b>${countUsers}</b>
+channels: |
+  📣 Channels:
+  ${namesChannels}
